@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker");
+* {
+  box-sizing: border-box;
+}
+.top-left{
+  color: black;
+  font: bold 25px/0 "Comic Sans MS", sans-serif;
+  position: relative;
+}
+.reload-button {
+  background-color: #d16ec6; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.reload-button:hover {
+  background-color: #45a049;
+}
+#app {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(rgb(70, 204, 225), rgb(0, 255, 60));
+}
+
+.bts {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+}
+.bts > div {
+  flex: 0 0 auto;
+  width: 100px;
+  height: 100px;
+}
+.bts > div .block {
+  cursor: pointer;
+  display: table-cell;
+  width: 100px;
+  height: 100px;
+  font: bold 50px/0 "Comic Sans MS", sans-serif;
+  vertical-align: middle;
+  text-align: center;
+}
+.bts > div:nth-child(1), .bts > div:nth-child(2), .bts > div:nth-child(3), .bts > div:nth-child(4), .bts > div:nth-child(5), .bts > div:nth-child(6) {
+  border-bottom: 3px solid #fff;
+}
+.bts > div:nth-child(2), .bts > div:nth-child(5), .bts > div:nth-child(8) {
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
+}
+.bts span {
+  display: block;
+}
+
+.win {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-10deg);
+  transform-origin: 50% 50%;
+  transform-origin: center;
+  width: 300px;
+  height: 300px;
+  margin-top: -60px;
+  margin-left: -20px;
+  padding-top: 140px;
+  font-family: "Permanent Marker", cursive;
+  text-align: center;
+}
+.win h2 {
+  display: block;
+  margin: 0 0 10px;
+  font-size: 100px;
+  text-shadow: 0px 0px 50px white;
+  text-align: center;
+}
+.win button {
+  cursor: pointer;
+  transition: all 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  outline: none;
+  display: inline-block;
+  padding: 15px;
+  background-color: darkred;
+  border: none;
+  border-radius: 10px;
+  font-family: "Permanent Marker", cursive;
+  font-size: 20px;
+  color: white;
+}
+.win button:hover {
+  transform: scale(12.1);
+}
